@@ -1,0 +1,71 @@
+// hero
+
+.hero {
+    &__container {
+        background-color: $peach;
+        padding: 0px 95px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero__left {
+        padding: 145px 0px;
+    }
+
+    .hero__heading {
+        width: 548px;
+        margin-bottom: 11px;
+        @include large-text;
+        color: $white;
+    }
+
+    .hero__info {
+        width: 445px;
+        margin-bottom: 40px;
+        @include regular-text;
+        color: $white;
+    }
+
+    .hero__btn {
+        padding: 17px 24px;
+        @include dark-button;
+        @include button-text;
+        border: none;
+    }
+
+    .hero__btn:hover {
+        @include button-hover;
+    }
+
+    .hero__btn:active {
+        @include button-active;
+    }
+
+    .hero__right::after {
+        content: "";
+        width: 640px;
+        height: 640px;
+        position: absolute;
+        background-image: url(/images/Oval.svg);
+        transform: translate(-260px, -110px);
+    }
+
+    .hero__right {
+        transform: translate(0px, 109px);
+        width: 284px;
+        height: 509px;
+        background-image: url(/images/phone.png);
+        filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1006px;
+        height: 504px;
+        transform: translateY(-280px);
+        z-index: -1;
+        background-image: url(/images/hero-after.png);
+    }
+}

@@ -1,0 +1,95 @@
+// main colors
+$peach: #E7816B;
+$black: #1D1C1E;
+$white: #FFFFFF;
+$light-peach: #FFAD9B;
+$dark-grey: #333136;
+$light-grey: #F1F3F5;
+
+// buttons
+@mixin dark-button {
+    background: $white;
+    color: $dark-grey;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s;
+}
+
+@mixin light-button {
+    background: $peach;
+    color: $white;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s;
+}
+
+@mixin button-hover {
+    background: $light-peach;
+    color: $white;
+    cursor: pointer;
+}
+
+@mixin button-active {
+    transform: scale(0.95, 0.95);
+}
+
+@mixin button-text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+// text-style
+
+// h1
+@mixin large-text {
+    color: $black;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+// h2
+@mixin medium-text {
+    color: $black;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 2px;
+}
+
+// h3
+@mixin little-text {
+    color: $dark-grey;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+// h4
+@mixin regular-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+// h5
+@mixin small-text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+// h6
+@mixin smallest-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+}

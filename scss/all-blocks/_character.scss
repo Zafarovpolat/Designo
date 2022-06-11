@@ -1,0 +1,64 @@
+// character
+
+.character {
+
+    & {
+        margin-bottom: 380px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 350px;
+        text-align: center;
+    }
+
+    &__item+&__item {
+        margin-left: 28.5px;
+    }
+
+    &__item:nth-child(3n+1) {
+        margin-left: 0;
+    }
+
+    &__item:nth-child(1) &__name::before {
+        content: url(/images/passionate.svg);
+    }
+
+    &__item:nth-child(2) &__name::before {
+        content: url(/images/resorceful.svg);
+    }
+
+    &__item:nth-child(3) &__name::before {
+        content: url(/images/friendly.svg);
+    }
+
+    &__item:nth-child(3) &__name {
+        margin-right: 8px;
+        margin-left: 16px;
+    }
+
+    &__name {
+        @include little-text;
+        color: $dark-grey;
+        margin-bottom: 32px;
+    }
+
+    &__info {
+        @include regular-text;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        transform: translateY(-250px);
+        width: 1006px;
+        height: 504px;
+        z-index: -1;
+        background-image: url(/images/characters-after.svg);
+    }
+}

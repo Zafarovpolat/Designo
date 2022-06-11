@@ -1,0 +1,152 @@
+// footer
+
+.footer {
+
+    & {
+        background-color: $black;
+    }
+
+    &__container {
+        padding: 144px 0px 72px 0px;
+    }
+
+    &__top {
+        margin-bottom: 31px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__list {
+        display: flex;
+        margin-bottom: 46px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        @include smallest-text;
+        color: $white;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
+    &__item+&__item {
+        margin-left: 42px;
+    }
+
+    &__top::after {
+        content: "";
+        border: 1px solid $white;
+        border-radius: 1px;
+        opacity: 0.1;
+        width: 1111px;
+        position: relative;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__bottom>address {
+        font-style: normal;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        @include regular-text;
+        color: $white;
+        opacity: 0.5;
+    }
+
+    &__bottom>address>span {
+        width: 350px;
+        font-weight: 700;
+    }
+
+    &__contact-list {
+        color: $white;
+        @include regular-text;
+        opacity: 0.5;
+        font-weight: 700;
+        opacity: 0.5;
+    }
+
+    &__web-list {
+        display: flex;
+    }
+
+    &__web-item+&__web-item {
+        margin-left: 16px;
+    }
+
+    .fa {
+        font-size: 24px;
+        color: #E7816B;
+    }
+
+    // talk small card in footer
+
+    &__talk {
+        width: 1111px;
+        border-radius: 15px;
+        padding: 72px 95px 72px 95px;
+        transform: translateY(-332px);
+        background-color: $peach;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__talk-wrapper {
+        width: 459px;
+    }
+
+    &__talk-name {
+        width: 268px;
+        margin-bottom: 10px;
+        @include medium-text;
+        color: $white;
+        line-height: 40px;
+        letter-spacing: 0;
+    }
+
+    &__talk-info {
+        @include regular-text;
+        color: $white;
+    }
+
+    &__btn {
+        height: 56px;
+        padding: 17px 18px;
+        @include dark-button;
+        @include button-text;
+    }
+
+    &__btn:hover {
+        @include button-hover;
+    }
+
+    &__btn:active {
+        @include button-active;
+    }
+
+    &__btn-wrapper::before {
+        content: url(/images/double-circle.svg);
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+    }
+
+    &__btn-wrapper::after {
+        content: url(/images/triple-circle.svg);
+        position: absolute;
+        z-index: -1;
+        bottom: -10px;
+        right: 0;
+    }
+}
