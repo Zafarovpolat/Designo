@@ -45,19 +45,6 @@
         cursor: pointer;
     }
 
-    // &__item:hover &__list>&__item::after {}
-
-    // &__list>&__item::after {
-    //     content: "";
-    //     width: 541px;
-    //     height: 640px;
-    //     position: absolute;
-    //     border-radius: 15px;
-    //     background-color: rgba(231, 129, 107, 0.4);
-    //     transform: translate(-271px, -367px);
-    //     z-index: -1;
-    // }
-
     &__name {
         margin-bottom: 24px;
         @include medium-text;
